@@ -1,0 +1,104 @@
+<?php
+session_start();
+if(($_SESSION['user']===null) or ($_SESSION['user']===' ')){
+    header('location:inde.php');
+}else{
+    echo " ";
+}
+?>
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Selección</title>
+    <meta charset="UTF-8">
+</head>
+<style>
+    body{
+        background-image:url('resources/now/stray.jpg');
+        background-position:center center;
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-attachment:fixed;
+        text-align:center;
+    }
+   .p{
+        font-size:25px;
+        padding:15px;
+        color:white;
+        width:470px;
+        height:206px;
+        margin:auto;
+        margin-bottom:10px;
+        border-radius:20px;
+        background:red;
+        text-align:center;
+        justify-content:center;
+    }
+    .pp{
+        font-size:25px;
+        padding:15px;
+        color:white;
+        width:470px;
+        height:126px;
+        margin:auto;
+        margin-bottom:10px;
+        border-radius:20px;
+        background:red;
+        text-align:center;
+        justify-content:center;
+    }
+    .h1{
+        font-size:60px;
+        text-align:center;
+        color:white;
+        padding:8px;
+        margin:0%;
+        border-radius:60px;
+        background:black;
+        opacity:+.8;
+    }
+    .kilo{
+        color:white;
+        font-size:15px;
+        margin-bottom:50px;
+    }
+    .grot{
+        background:cyan;
+        background-color:black;
+        padding:20px;
+        width:600px;
+        height:auto;
+        opacity:.8;
+        margin:auto;
+        border-radius:10px;
+        
+    }
+    .h2{
+        font-size:55px;
+        text-align:center;
+        color:black;
+        padding:1px;
+        margin:3%;
+        border-radius:10px;
+        background:white;
+        opacity:+.8;
+    }
+</style>
+<body>
+<h1 class='h1'>Bienvenida Nataly</h1><hr class='kilo'>
+<?php
+$Docc=$_SESSION['user'];
+$jul=explode(" ",$Docc);
+$pip=mysqli_connect("localhost","root","","cbtis212")or die("Error hd1 ");
+$qu="select count(*) as xd from alumnos where Maestros like '%$Docc%' group by Gra_grup order by Gra_grup asc";
+$que=mysqli_query($pip,$qu);
+$t=0;
+$yu="select * from alumnos where Maestros like '%$Docc%' group by Gra_grup order by Gra_grup asc";
+$what=mysqli_query($pip,$yu);
+?>
+<section class="grot">
+    <h1 class="h2">NOTICIAS DE HOY</h1><!--class='p'>-->
+    <h1 class='p'>Y de maravillas del mundo, <b>Nataly</b> es la mujer mas hermosa! <br><br>Esta shica le caracteriza por su dulce y tierna sorisa, un encanto<br> sobrenatural e inexplicable que la hace unica y especial!</h1>
+</section>
+</body>
+</html>
