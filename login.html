@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--<link rel="stylesheet" href="estilos.css">
+    <script src="login.js"></script>-->
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Broadway';
+        }form{
+        padding-top: 20px;
+        width: 350px;
+        height: 400px;
+        background-color: rgb(42, 91, 165);
+        margin: 50px auto;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        box-shadow: -10px 20px 15px 10px gray;
+        }h1{
+        color: white;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        }input{
+        font-size: 16px;
+        padding: 8px;
+        display: flex;
+        margin: 10px auto;
+        }label {
+            color: white;
+            display: block;
+        text-align: center;
+        margin: 15px;
+        font-size: 20px;
+        }input[type="button"]{
+            width: 100px;
+            margin-top: 20px;
+            font-size: 20px;
+            display: block;
+            background-color: rgb(138, 30, 210);
+        }input[type="button"]:hover{
+            background-color: rgb(255, 80, 153);
+        }
+    </style>
+</head>
+<body>
+<form action="" method="">
+<h1>Inicio</h1>
+<label for="">Nombre: </label>
+<input type="text"  placeholder=   " &#129333; Escribe tu Usuario: " id="usuario">
+<label for="">Contraseña: </label>
+<input type="password" placeholder= " &#128272; Escribe tu Contraseña" id="pass">
+<input type="button" value="Entrar" onclick="loguear()">
+</form>
+<script>
+    function loguear()
+{
+var user= document.getElementById("usuario").value;
+var pass= document.getElementById("pass").value;
+if(user=="1" && pass=="1"){ 
+window.location="\\Programs/bybstore/bindex.html";
+}
+else{
+    alert("Revisa tus datos, hay algo incorrecto ");
+}
+}
+</script>
+</body>
+</html>
