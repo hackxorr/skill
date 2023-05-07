@@ -1,0 +1,22 @@
+<div id="galeria">
+  <img src="imagen1.jpg" class="amarillo">
+  <img src="imagen2.jpg">
+  <img src="imagen3.jpg" class="amarillo">
+</div>
+
+<input type="search" placeholder="Buscar imágenes amarillas" oninput="buscarImagenes()">
+
+<script>
+function buscarImagenes() {
+  var texto = document.querySelector('input[type="search"]').value.toLowerCase();
+  var imagenes = document.querySelectorAll('#galeria img.amarillo');
+
+  for (var i = 0; i < imagenes.length; i++) {
+    if (imagenes[i].alt.toLowerCase().includes(texto)) {
+      imagenes[i].style.display = 'block';
+    } else {
+      imagenes[i].style.display = 'none';
+    }
+  }
+}
+</script>

@@ -1,0 +1,429 @@
+<!Doctype html>
+<html>
+<head lang="es">
+    <title>Bybstore</title>
+    <link rel="icon" href="img/play.ico">
+    <meta property="og:image" content="https://github.com/dkparw/dkparw.github.io/blob/main/img/play.png?raw=true">
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#FF0000">
+    <meta name="robots" content="noindex">
+    <meta name="author" content="Jesus Pedraza D, Sergio Junior...">
+    <meta name="description" content="Inicia ya, y diviertete jugando con tus mejores amigos multiples juegos!!.">
+    <style>
+        body{
+            background:radial-gradient(center center, circle, black, #1162ac);
+            background-color: rgb(20, 20, 20);
+            background-image:url(W:/xampp/htdocs/Scholl1/lol/Sim/now/pio.jpg);
+            background-image: linear-gradient(to bottom,rgb(66, 5, 81),#222222,#222222,#222222,#222222, #222222, #222222);
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-attachment:fixed;
+            background-position: bottom right;
+            margin:0px 60px 0px 60px;
+        }
+        :root{
+            --altura:190px;
+            --ancho:180px;
+            --do:196px;
+            --tr:390px;
+            --cu:586px;
+            --ci:780px;
+            --se:976px;
+        }
+        *{
+            margin:0px 0px 0px 0px;
+        }
+        .enca{
+            background:radial-gradient(center center, circle, black, #1162ac);
+            width:98.4%;
+            margin-top:0px;
+            padding:10px;
+            backdrop-filter: blur(100px);
+        }
+        #enca1{
+            background:rgb(77, 75, 75);
+            margin:0px;
+            width:99.5%;
+            padding:3px;
+            margin-top:0px;
+        }
+        .byt{
+            background:#E0E0E0;
+            margin:0px 40px 0px 35px;
+            margin-top:30px;
+        }
+        .pim{
+            text-decoration:none;
+            color:rgb(255, 255, 255) ;
+        }
+        .rt{
+            list-style:none;
+            display:flex;
+            margin-top:30px;
+            margin-bottom: 10px;
+            font-family:arial;
+            margin-left:270px;
+            height:20px;
+        }
+        .np{
+            display:block;
+            font-size:10px;
+            width: 32px;
+            height:32px;
+            margin-left:1090px;
+            margin-top:20px;
+            position:absolute;
+            cursor: pointer;
+        }
+        .lets{
+            display:none;
+            margin-left:1070px;
+            text-align:center;
+            font-size:15px;
+            margin-top: 60px;
+            position:absolute;
+            background:black;
+            color:white;
+            width:50px;
+            height: 18px;
+            padding:8px;
+            border-radius:10px;
+            opacity:.8;
+        }
+        .np:hover + .lets{
+            display:block;
+        }
+        #buy{
+            display:none;
+            position:absolute;
+            margin-left:300px;
+            margin-top:20px;
+            border-radius:5px;
+            width:760px;
+            height:34px;
+            padding:0px 10px 0px 10px;
+            font-size:20px;
+            background:rgb(203, 203, 203);
+            color:rgb(11, 11, 11);
+            border:1px solid black;
+        }
+        .calp{
+            display:none;
+            font-size:30px;
+            position:absolute;
+            margin-left:1090px;
+            font-family:arial;
+            margin-top:19.2px;
+            border-radius:50%;
+            padding:11px;
+            line-height:14px;
+            color:white;
+            background:rgb(255, 0, 0);
+        }
+        .calp:hover{
+            cursor:pointer;
+        }
+        .calp:hover + .lets{
+            cursor:pointer;
+            display: block;
+        }
+        .mn >a{
+            text-decoration:none;
+            color:white;
+            margin-left: 40px;
+            font-size:20px;
+        }
+        .dop{
+            font-size:50px;
+            color:white ;
+            font-family: "serif";
+            letter-spacing:2px;
+            font-weight: 00;
+            margin-left:45px;
+            position:absolute;
+        }
+        .un{
+            background:#E0E0E0;
+            width: var(--ancho);
+            height:auto;
+            text-align:center;
+            font-family: courier;
+            position:absolute;
+            margin-left:0px;
+            border-top-right-radius:10px;
+            border-top-left-radius:10px;
+            padding:0px 0px 10px 0px;
+            box-shadow: 0px 0px 5px 1px gray;
+        }
+        .un:hover{
+            display:block;
+            background:rgb(186, 184, 184);
+            cursor:pointer;
+            overflow:block;
+        }.un:hover > .hul{
+            display:block;
+        }
+        .do{
+            background:#E0E0E0;
+            width:  var(--ancho);
+            height:auto;
+            text-align:center;
+            font-family: courier;
+            position:absolute;
+            border-top-right-radius:10px;
+            border-top-left-radius:10px;
+            padding:0px 0px 10px 0px;
+            box-shadow: 0px 0px 5px 1px gray;
+            margin-left:var(--do);
+        }
+        .do:hover{
+            display:block;
+            background:rgb(186, 184, 184);
+            cursor:pointer;
+            overflow:block;
+        }.do:hover > .hul{
+            display:block;
+        }
+        .tr{
+            background:#E0E0E0;
+            width:  var(--ancho);
+            height:auto;
+            text-align:center;
+            font-family: courier;
+            position:absolute;
+            border-top-right-radius:10px;
+            border-top-left-radius:10px;
+            padding:0px 0px 10px 0px;
+            box-shadow: 0px 0px 5px 1px gray;
+            margin-left:var(--tr);
+        }
+        .tr:hover{
+            display:block;
+            background:rgb(186, 184, 184);
+            cursor:pointer;
+            overflow:block;
+        }.tr:hover > .hul{
+            display:block;
+        }
+        .cu{
+            background:#E0E0E0;
+            width:  var(--ancho);
+            height:auto;
+            text-align:center;
+            font-family: courier;
+            position:absolute;
+            border-top-right-radius:10px;
+            border-top-left-radius:10px;
+            padding:0px 0px 10px 0px;
+            box-shadow: 0px 0px 5px 1px gray;
+            margin-left:var(--cu);
+        }
+        .cu:hover{
+            display:block;
+            background:rgb(186, 184, 184);
+            cursor:pointer;
+            overflow:block;
+        }
+        .cu:hover > .hul{
+            display:block;
+        }
+        .ci{
+            background:#E0E0E0;
+            width:  var(--ancho);
+            height:auto;
+            text-align:center;
+            font-family: courier;
+            position:absolute;
+            border-top-right-radius:10px;
+            border-top-left-radius:10px;
+            padding:0px 0px 10px 0px;
+            box-shadow: 0px 0px 5px 1px gray;
+            margin-left:var(--ci);
+        }
+        .ci:hover{
+            display:block;
+            background:rgb(186, 184, 184);
+            cursor:pointer;
+            overflow:block;
+        }
+        .ci:hover > .hul{
+            display:block;
+        }
+        .se{
+            background:#E0E0E0;
+            width:  var(--ancho);
+            height:auto;
+            text-align:center;
+            font-family: courier;
+            position:absolute;
+            border-top-right-radius:10px;
+            border-top-left-radius:10px;
+            padding:0px 0px 10px 0px;
+            box-shadow: 0px 0px 5px 1px gray;
+            margin-left:var(--se);
+        }
+        .hul{
+            display:none;
+            background:black;
+            color:white;
+            width:93.4%;
+            height:auto;
+            padding:6px;
+            opacity:.8;
+            position:absolute;
+            margin-left:0px;
+            word-spacing:40px;
+            border-top-right-radius:5px;
+            border-top-left-radius:5px;
+            transition:.5s;
+            font-size:14.8px;
+        }
+        .se:hover{
+            display:block;
+            background:rgb(186, 184, 184);
+            cursor:pointer;
+            overflow:block;
+        }.se:hover > .hul{
+            display:block;
+        }
+        .kingo {
+            border-top-right-radius:5px;
+            border-top-left-radius:5px;
+            width: var(--ancho);
+            height:var(--altura);
+            object-fit:cover;
+            margin-bottom:10px;
+            background-size: cover;
+        }
+        .mortal{
+            border-top-right-radius:5px;
+            border-top-left-radius:5px;
+            width: var(--ancho);
+            height:var(--altura);
+            object-fit:cover;
+            margin-bottom:10px;
+            background-size: cover;
+        }
+        .pac{
+            border-top-right-radius:5px;
+            border-top-left-radius:5px;
+            width: var(--ancho);
+            height:var(--altura);
+            object-fit:cover;
+            margin-bottom:10px;
+            background-size: cover;
+        }
+        .snow{
+            border-top-right-radius:5px;
+            border-top-left-radius:5px;
+            width: var(--ancho);
+            height:var(--altura);
+            object-fit:cover;
+            margin-bottom:10px;
+            background-size: cover;
+        }
+        .super{
+            border-top-right-radius:5px;
+            border-top-left-radius:5px;
+            width: var(--ancho);
+            height:var(--altura);
+            object-fit:cover;
+            margin-bottom:10px;
+            background-size: cover;
+        }
+        .bladir{
+            border-top-right-radius:5px;
+            border-top-left-radius:5px;
+            width: var(--ancho);
+            height:var(--altura);
+            object-fit:cover;
+            margin-bottom:10px;
+            background-size: cover;
+        }
+        .filtro{
+                display:none;
+        }
+        .filtro1{
+                display:none;
+        }
+    </style>
+</head>
+<body onload="init()">
+    <div class="pol">
+    <nav class="enca">
+    <span class="dop"><a href="https://dkparw.github.io/bindex.html" class='pim'>Bybstore</a></span><!--&#x2764;&#xFE0F;-->
+    <img class='np' src="img/lupa.png" onclick="di()"><span class="lets">Buscar</span>
+    <input id='buy' type="text" oninput='initt()' placeholder="Buscar Juegos"><span id='cat' class="calp">x</span>
+    <span class="lets">Ocultar</span>
+    <ul class="rt">
+        <li class="mn"><a href="#">Acción</a></li>
+        <li class="mn"><a href="#">Aventura</a></li>
+        <li class="mn"><a href="#">Estrategia </a></li>
+        <li class="mn"><a href="#">Deporte</a></li>
+        <li class="mn"><a href="#">Carros</a></li>
+        <li class="mn"><a href="#">Disparos</a></li>
+    </ul>
+    <!--<input type="search" placeholder="Buscar imágenes amarillas" oninput="buscarImagenes()">-->
+    </nav>
+    <nav id="enca1"></nav>
+    </div>
+    <div id='juegos' class="byt">
+    <section name='play' id="Estrategia" class="un" ><p class="hul">ONLINE 271&#x1F464;</p>
+        <a href="snake.html"><img src="img/snakee.jpg" class="kingo"></a>
+        <p >Snake</p>
+    </section>
+    <section name='play' id="Estrategia" class="do" onclick="alert('En Mantenimiento...')"><p class="hul">ONLINE 567&#x1F464;</p>
+        <a href="#" ><img src="img/mortalkombat.jpeg" class="mortal"></a>
+    <p>Mortal Kombat</p>
+    </section>
+    <section name='play' id="Arcade"class="tr" onclick="alert('En Mantenimiento...')"><p class="hul">ONLINE 200&#x1F464;</p>
+        <a href="#" ><img src="img/pacman.jpeg" class="pac"></a>
+    <p>Pac-Man</p>
+    </section>
+    <section name='play' id="Accion" class="cu" onclick="alert('En Mantenimiento...')"><p class="hul">MOVIL 130&#x1F464;</p>
+        <a href="#" ><img src="img/snowbros.jpeg" class="snow"></a>
+    <p>Snow Bros</p>
+    </section>
+    <section name='play' id="Aventura" class="ci" onclick="alert('En Mantenimiento...')"><p class="hul">ONLINE 220&#x1F464;</p>
+        <a href="#" ><img src="img/supermariobros3.jpeg" class="super"></a>
+    <p> Super Mario Bros 3</p>
+    </section>
+    <section name='play' id="Estrategia" class="se"><p class="hul">PC 2300&#x1F464;</p>
+        <a href="img/bladir.jpeg" download='cat.png'><img src="img/bladir.jpeg" class="bladir"></a>
+        <p>Bladir</p>
+    </section>
+    <script>
+        function initt(){
+            /*var tyy=document.querySelector('#buy');
+            var imagenes = document.querySelectorAll('#juegos');
+            const juegosEstrategia = document.querySelectorAll('#Estrategia');
+            for (let i = 0; i < imagenes.length; i++) {
+            imagenes[i].style.display = 'none';
+            }
+            alert(tty);*/
+            document.addEventListener("keyup", e=>{
+            /*e.target.matches("#buscador")
+            console.log(e.target.value)*/
+            if(e.target.matches('#buy')){
+                document.querySelectorAll("section[name='play']").forEach(frut=>{
+                    frut.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+                    ?frut.classList.remove("filtro")
+                    :frut.classList.add("filtro")
+                })
+            }
+            })
+        }
+        function di(){
+            /*document.getElementById("imagen").onclick = function() { }*/
+            document.getElementById("buy").style.display='block';
+            document.getElementById("cat").style.display='block';
+        }
+        document.getElementById("cat").onclick = function(){
+            document.getElementById("buy").style.display='none';
+            document.getElementById("cat").style.display='none';
+        }
+    </script>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

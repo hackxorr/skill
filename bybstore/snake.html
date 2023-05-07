@@ -1,0 +1,592 @@
+<!Doctype html>
+<html>
+<head lang="es">
+    <title>Bybstore</title>
+    <link rel="icon" href="img/play.ico">
+    <meta property="og:image" content="https://github.com/dkparw/dkparw.github.io/blob/main/img/play.png?raw=true">
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#FF0000">
+    <meta name="robots" content="noindex">
+    <meta name="author" content="Jesus Pedraza D, Sergio Junior...">
+    <meta name="description" content="Inicia ya, y diviertete jugando con tus mejores amigos multiples juegos!!.">
+    <style>
+        body{
+            background:radial-gradient(center center, circle, black, #1162ac);
+            background-color: rgb(20, 20, 20);
+            background-image:url(img/fo.png);
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-attachment:fixed;
+            background-position: bottom right;
+            margin:0px 60px 0px 60px;
+        }
+        :root{
+            --altura:190px;
+            --ancho:180px;
+            --do:196px;
+            --tr:390px;
+            --cu:586px;
+            --ci:780px;
+            --se:976px;
+        }
+        *{
+            margin:0px 0px 0px 0px;
+        }
+        .enca{
+            background:radial-gradient(center center, circle, black, #1162ac);
+            width:98.4%;
+            margin-top:0px;
+            padding:10px;
+            backdrop-filter: blur(100px);
+        }
+        #enca1{
+            background:rgb(77, 75, 75);
+            margin:0px;
+            width:99.5%;
+            padding:3px;
+            margin-top:0px;
+        }
+        .byt{
+            background:#E0E0E0;
+            margin:0px 40px 0px 35px;
+            margin-top:30px;
+        }
+        .pim{
+            text-decoration:none;
+            color:rgb(255, 255, 255) ;
+        }
+        .rt{
+            list-style:none;
+            display:flex;
+            margin-top:30px;
+            margin-bottom: 10px;
+            font-family:arial;
+            margin-left:270px;
+            height:20px;
+        }
+        .np{
+            display:block;
+            font-size:10px;
+            width: 32px;
+            height:32px;
+            margin-left:1090px;
+            margin-top:20px;
+            position:absolute;
+            cursor: pointer;
+        }
+        .lets{
+            display:none;
+            margin-left:1070px;
+            text-align:center;
+            font-size:15px;
+            margin-top: 60px;
+            position:absolute;
+            background:black;
+            color:white;
+            width:50px;
+            height: 18px;
+            padding:8px;
+            border-radius:10px;
+            opacity:.8;
+        }
+        .np:hover + .lets{
+            display:block;
+        }
+        #buy{
+            display:none;
+            position:absolute;
+            margin-left:300px;
+            margin-top:20px;
+            border-radius:5px;
+            width:760px;
+            height:34px;
+            padding:0px 10px 0px 10px;
+            font-size:20px;
+            background:rgb(203, 203, 203);
+            color:rgb(11, 11, 11);
+            border:1px solid black;
+        }
+        .calp{
+            display:none;
+            font-size:30px;
+            position:absolute;
+            margin-left:1090px;
+            font-family:arial;
+            margin-top:19.2px;
+            border-radius:50%;
+            padding:11px;
+            line-height:14px;
+            color:white;
+            background:rgb(255, 0, 0);
+        }
+        .calp:hover{
+            cursor:pointer;
+        }
+        .calp:hover + .lets{
+            cursor:pointer;
+            display: block;
+        }
+        .mn >a{
+            text-decoration:none;
+            color:white;
+            margin-left: 40px;
+            font-size:20px;
+        }
+        .dop{
+            font-size:50px;
+            color:white ;
+            font-family: "serif";
+            letter-spacing:2px;
+            font-weight: 00;
+            margin-left:45px;
+            position:absolute;
+        }
+        .un{
+            background:#E0E0E0;
+            width: var(--ancho);
+            height:auto;
+            text-align:center;
+            font-family: courier;
+            position:absolute;
+            margin-left:0px;
+            border-top-right-radius:10px;
+            border-top-left-radius:10px;
+            padding:0px 0px 10px 0px;
+            box-shadow: 0px 0px 5px 1px gray;
+        }
+        .un:hover{
+            display:block;
+            background:rgb(186, 184, 184);
+            cursor:pointer;
+            overflow:block;
+        }.un:hover > .hul{
+            display:block;
+        }
+        .do{
+            background:#E0E0E0;
+            width:  var(--ancho);
+            height:auto;
+            text-align:center;
+            font-family: courier;
+            position:absolute;
+            border-top-right-radius:10px;
+            border-top-left-radius:10px;
+            padding:0px 0px 10px 0px;
+            box-shadow: 0px 0px 5px 1px gray;
+            margin-left:var(--do);
+        }
+        .do:hover{
+            display:block;
+            background:rgb(186, 184, 184);
+            cursor:pointer;
+            overflow:block;
+        }.do:hover > .hul{
+            display:block;
+        }
+        .tr{
+            background:#E0E0E0;
+            width:  var(--ancho);
+            height:auto;
+            text-align:center;
+            font-family: courier;
+            position:absolute;
+            border-top-right-radius:10px;
+            border-top-left-radius:10px;
+            padding:0px 0px 10px 0px;
+            box-shadow: 0px 0px 5px 1px gray;
+            margin-left:var(--tr);
+        }
+        .tr:hover{
+            display:block;
+            background:rgb(186, 184, 184);
+            cursor:pointer;
+            overflow:block;
+        }.tr:hover > .hul{
+            display:block;
+        }
+        .cu{
+            background:#E0E0E0;
+            width:  var(--ancho);
+            height:auto;
+            text-align:center;
+            font-family: courier;
+            position:absolute;
+            border-top-right-radius:10px;
+            border-top-left-radius:10px;
+            padding:0px 0px 10px 0px;
+            box-shadow: 0px 0px 5px 1px gray;
+            margin-left:var(--cu);
+        }
+        .cu:hover{
+            display:block;
+            background:rgb(186, 184, 184);
+            cursor:pointer;
+            overflow:block;
+        }
+        .cu:hover > .hul{
+            display:block;
+        }
+        .ci{
+            background:#E0E0E0;
+            width:  var(--ancho);
+            height:auto;
+            text-align:center;
+            font-family: courier;
+            position:absolute;
+            border-top-right-radius:10px;
+            border-top-left-radius:10px;
+            padding:0px 0px 10px 0px;
+            box-shadow: 0px 0px 5px 1px gray;
+            margin-left:var(--ci);
+        }
+        .ci:hover{
+            display:block;
+            background:rgb(186, 184, 184);
+            cursor:pointer;
+            overflow:block;
+        }
+        .ci:hover > .hul{
+            display:block;
+        }
+        .se{
+            background:#E0E0E0;
+            width:  var(--ancho);
+            height:auto;
+            text-align:center;
+            font-family: courier;
+            position:absolute;
+            border-top-right-radius:10px;
+            border-top-left-radius:10px;
+            padding:0px 0px 10px 0px;
+            box-shadow: 0px 0px 5px 1px gray;
+            margin-left:var(--se);
+        }
+        .hul{
+            display:none;
+            background:black;
+            color:white;
+            width:93.4%;
+            height:auto;
+            padding:6px;
+            opacity:.8;
+            position:absolute;
+            margin-left:0px;
+            word-spacing:40px;
+            border-top-right-radius:5px;
+            border-top-left-radius:5px;
+            transition:.5s;
+            font-size:14.8px;
+        }
+        .se:hover{
+            display:block;
+            background:rgb(186, 184, 184);
+            cursor:pointer;
+            overflow:block;
+        }.se:hover > .hul{
+            display:block;
+        }
+        .kingo {
+            border-top-right-radius:5px;
+            border-top-left-radius:5px;
+            width: var(--ancho);
+            height:var(--altura);
+            object-fit:cover;
+            margin-bottom:10px;
+            background-size: cover;
+        }
+        .mortal{
+            border-top-right-radius:5px;
+            border-top-left-radius:5px;
+            width: var(--ancho);
+            height:var(--altura);
+            object-fit:cover;
+            margin-bottom:10px;
+            background-size: cover;
+        }
+        .pac{
+            border-top-right-radius:5px;
+            border-top-left-radius:5px;
+            width: var(--ancho);
+            height:var(--altura);
+            object-fit:cover;
+            margin-bottom:10px;
+            background-size: cover;
+        }
+        .snow{
+            border-top-right-radius:5px;
+            border-top-left-radius:5px;
+            width: var(--ancho);
+            height:var(--altura);
+            object-fit:cover;
+            margin-bottom:10px;
+            background-size: cover;
+        }
+        .super{
+            border-top-right-radius:5px;
+            border-top-left-radius:5px;
+            width: var(--ancho);
+            height:var(--altura);
+            object-fit:cover;
+            margin-bottom:10px;
+            background-size: cover;
+        }
+        .bladir{
+            border-top-right-radius:5px;
+            border-top-left-radius:5px;
+            width: var(--ancho);
+            height:var(--altura);
+            object-fit:cover;
+            margin-bottom:10px;
+            background-size: cover;
+        }
+        .filtro{
+                display:none;
+        }
+        .filtro1{
+                display:none;
+        }
+    </style>
+    <style>
+        .volver {
+          background-color: transparent;
+          border:none;
+          color:white;
+          position:absolute;
+          margin: 6px 30px;
+          cursor: pointer;
+        }
+        .Salis2{
+          display:none;
+        }
+        .vii{
+          width:60px;
+          height:60px;
+        }
+        .volver:hover + .Salis2{
+          display:block;
+          font-family:arial;
+          background:black;
+          opacity:.8;
+          text-align:center;
+          font-size:14px;
+          width:80px;
+          padding:7px;
+          height: 20px;
+          color:white;
+          border-radius:4px;
+          margin-left:17px;
+          margin-top:70px;
+          position:absolute;
+        }
+      </style>
+</head>
+<body onload="init()">
+    <div class="pol">
+    <nav class="enca">
+    <span class="dop"><a href="https://dkparw.github.io/bindex.html" class='pim'>Bybstore</a></span><!--&#x2764;&#xFE0F;-->
+    <img class='np' src="img/lupa.png" onclick="di()"><span class="lets">Buscar</span>
+    <input id='buy' type="text" oninput='initt()' placeholder="Buscar Juegos"><span id='cat' class="calp">x</span>
+    <span class="lets">Ocultar</span>
+    <ul class="rt">
+        <li class="mn"><a href="#">Acción</a></li>
+        <li class="mn"><a href="#">Aventura</a></li>
+        <li class="mn"><a href="#">Estrategia </a></li>
+        <li class="mn"><a href="#">Deporte</a></li>
+        <li class="mn"><a href="#">Carros</a></li>
+        <li class="mn"><a href="#">Disparos</a></li>
+    </ul>
+    <!--<input type="search" placeholder="Buscar imágenes amarillas" oninput="buscarImagenes()">-->
+    </nav>
+    <nav id="enca1"></nav>
+    </div> 
+    <button class='volver' onclick="history.back()"><img class='vii' src='img/sar.png'></button>
+    <p class='Salis2'>Regresar</p>
+    <!--
+    <div id='juegos' class="byt">
+    <section name='play' id="Estrategia" class="un"><p class="hul">ONLINE 271&#x1F464;</p>
+        <a href="img/kingoffighters.jpeg" download='cat.png'><img src="img/kingoffighters.jpeg" class="kingo"></a>
+        <p class="pl">Snake</p>
+    </section>
+    <section name='play' id="Estrategia" class="do"><p class="hul">ONLINE 567&#x1F464;</p>
+        <a href="https://google.com" target="_blanck"><img src="img/mortalkombat.jpeg" class="mortal"></a>
+    <p class="pl">Mortal Kombat</p>
+    </section>
+    <section name='play' id="Arcade"class="tr"><p class="hul">ONLINE 200&#x1F464;</p>
+        <a href="https://google.com" target="_blanck"><img src="img/pacman.jpeg" class="pac"></a>
+    <p class="pl">Pac-Man</p>
+    </section>
+    <section name='play' id="Accion" class="cu"><p class="hul">MOVIL 130&#x1F464;</p>
+        <a href="https://google.com" target="_blanck"><img src="img/snowbros.jpeg" class="snow"></a>
+    <p class="pl">Snow Bros</p>
+    </section>
+    <section name='play' id="Aventura" class="ci"><p class="hul">ONLINE 220&#x1F464;</p>
+        <a href="https://google.com" target="_blanck"><img src="img/supermariobros3.jpeg" class="super"></a>
+    <p class="pl"> Super Mario Bros 3</p>
+    </section>
+    <section name='play' id="Estrategia" class="se"><p class="hul">PC 2300&#x1F464;</p>
+        <a href="img/bladir.jpeg" download='cat.png'><img src="img/bladir.jpeg" class="bladir"></a>
+        <p class="pl">Bladir</p>
+    </section>-->
+    <script>
+        function initt(){
+            /*var tyy=document.querySelector('#buy');
+            var imagenes = document.querySelectorAll('#juegos');
+            const juegosEstrategia = document.querySelectorAll('#Estrategia');
+            for (let i = 0; i < imagenes.length; i++) {
+            imagenes[i].style.display = 'none';
+            }
+            alert(tty);*/
+            document.addEventListener("keyup", e=>{
+            /*e.target.matches("#buscador")
+            console.log(e.target.value)*/
+            if(e.target.matches('#buy')){
+                document.querySelectorAll("section[name='play']").forEach(frut=>{
+                    frut.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+                    ?frut.classList.remove("filtro")
+                    :frut.classList.add("filtro")
+                })
+            }
+            })
+        }
+        function di(){
+            /*document.getElementById("imagen").onclick = function() { }*/
+            document.getElementById("buy").style.display='block';
+            document.getElementById("cat").style.display='block';
+        }
+        document.getElementById("cat").onclick = function(){
+            document.getElementById("buy").style.display='none';
+            document.getElementById("cat").style.display='none';
+        }
+    </script>
+    </div><!--***********************************************************************************************************************************-->
+  <style>
+  canvas {
+    border: 1px solid white;
+  }
+  .sr{
+    margin-left: 450px;
+    margin-top:100px;
+  }
+  </style>
+</head>
+<body>
+<canvas class='sr' width="400" height="400" id="game"></canvas>
+<script>
+var canvas = document.getElementById('game');
+var context = canvas.getContext('2d');
+var grid = 16;
+var count = 0;
+var snake = {
+  x: 160,
+  y: 160,
+  // snake velocity. moves one grid length every frame in either the x or y direction
+  dx: grid,
+  dy: 0,
+  // keep track of all grids the snake body occupies
+  cells: [],
+  // length of the snake. grows when eating an apple
+  maxCells: 4
+};
+var apple = {
+  x: 320,
+  y: 320
+};
+// get random whole numbers in a specific range
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+// game loop
+function loop() {
+  requestAnimationFrame(loop);
+  // slow game loop to 15 fps instead of 60 (60/15 = 4)
+  if (++count < 4) {
+    return;
+  }
+  count = 0;
+  context.clearRect(0,0,canvas.width,canvas.height);
+  // move snake by it's velocity
+  snake.x += snake.dx;
+  snake.y += snake.dy;
+  // wrap snake position horizontally on edge of screen
+  if (snake.x < 0) {
+    snake.x = canvas.width - grid;
+  }
+  else if (snake.x >= canvas.width) {
+    snake.x = 0;
+  }
+  // wrap snake position vertically on edge of screen
+  if (snake.y < 0) {
+    snake.y = canvas.height - grid;
+  }
+  else if (snake.y >= canvas.height) {
+    snake.y = 0;
+  }
+  // keep track of where snake has been. front of the array is always the head
+  snake.cells.unshift({x: snake.x, y: snake.y});
+  // remove cells as we move away from them
+  if (snake.cells.length > snake.maxCells) {
+    snake.cells.pop();
+  }
+  // draw apple
+  context.fillStyle = 'red';
+  context.fillRect(apple.x, apple.y, grid-1, grid-1);
+  // draw snake one cell at a time
+  context.fillStyle = 'green';
+  snake.cells.forEach(function(cell, index) {
+    // drawing 1 px smaller than the grid creates a grid effect in the snake body so you can see how long it is
+    context.fillRect(cell.x, cell.y, grid-1, grid-1);  
+    // snake ate apple
+    if (cell.x === apple.x && cell.y === apple.y) {
+      snake.maxCells++;
+      // canvas is 400x400 which is 25x25 grids 
+      apple.x = getRandomInt(0, 25) * grid;
+      apple.y = getRandomInt(0, 25) * grid;
+    }
+    // check collision with all cells after this one (modified bubble sort)
+    for (var i = index + 1; i < snake.cells.length; i++) {
+      // snake occupies same space as a body part. reset game
+      if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
+        snake.x = 160;
+        snake.y = 160;
+        snake.cells = [];
+        snake.maxCells = 4;
+        snake.dx = grid;
+        snake.dy = 0;
+        apple.x = getRandomInt(0, 25) * grid;
+        apple.y = getRandomInt(0, 25) * grid;
+      }
+    }
+  });
+}
+// listen to keyboard events to move the snake
+document.addEventListener('keydown', function(e) {
+  // prevent snake from backtracking on itself by checking that it's 
+  // not already moving on the same axis (pressing left while moving
+  // left won't do anything, and pressing right while moving left
+  // shouldn't let you collide with your own body)
+  // left arrow key
+  if (e.which === 37 && snake.dx === 0) {
+    snake.dx = -grid;
+    snake.dy = 0;
+  }
+  // up arrow key
+  else if (e.which === 38 && snake.dy === 0) {
+    snake.dy = -grid;
+    snake.dx = 0;
+  }
+  // right arrow key
+  else if (e.which === 39 && snake.dx === 0) {
+    snake.dx = grid;
+    snake.dy = 0;
+  }
+  // down arrow key
+  else if (e.which === 40 && snake.dy === 0) {
+    snake.dy = grid;
+    snake.dx = 0;
+  }
+});
+// start the game
+requestAnimationFrame(loop);
+</script>
+</body>
+</html>
