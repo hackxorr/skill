@@ -77,20 +77,10 @@
     }
 </style>
 <body>
-<h1 class='h1'>Bienvenida Nataly</h1><hr class='kilo'>
-<?php
-$Docc=$_SESSION['user'];
-$jul=explode(" ",$Docc);
-$pip=mysqli_connect("localhost","root","","cbtis212")or die("Error hd1 ");
-$qu="select count(*) as xd from alumnos where Maestros like '%$Docc%' group by Gra_grup order by Gra_grup asc";
-$que=mysqli_query($pip,$qu);
-$t=0;
-$yu="select * from alumnos where Maestros like '%$Docc%' group by Gra_grup order by Gra_grup asc";
-$what=mysqli_query($pip,$yu);
-?>
+<h1 class='h1'>Bienvenida Zoe</h1><hr class='kilo'>
 <section class="grot">
     <h1 class="h2">NOTICIAS DE HOY</h1><!--class='p'>-->
-    <h1 class='p'>Y de maravillas del mundo, <b>Nataly</b> es la mujer mas hermosa! <br><br>Esta shica le caracteriza por su dulce y tierna sorisa, un encanto<br> sobrenatural e inexplicable que la hace unica y especial!</h1>
+    <h1 class='p'>Y de maravillas del mundo, <b>Zoe</b> es la mujer mas hermosa! <br><br>Esta shica le caracteriza por su dulce y tierna sorisa, un encanto<br> sobrenatural e inexplicable que la hace unica y especial!</h1>
 </section>
 </body>
 </html>
